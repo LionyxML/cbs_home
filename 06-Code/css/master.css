@@ -1,0 +1,118 @@
+:root {
+  --main-bg-color: #ffffff;
+  --nav-fg-color: #000000;
+  --nav-height: 50px;
+  --nav-hover: #11151f;
+}
+
+.navbar {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  min-height: var(--nav-height);
+  background-color: var(--main-bg-color);
+  text: var(--nav-fg-color);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar--logo {
+  margin-left: 14px;
+}
+
+.navbar--logo > img {
+  width: 185px;
+  height: 48px;
+}
+
+.navbar--links {
+  visibility: hidden;
+  z-index: 100;
+  position: absolute;
+  right: -200px;
+  top: var(--nav-height);
+  width: 157px;
+  height: 267px;
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  background-color: var(--main-bg-color);
+  opacity: 0%;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.navbar--links ul {
+}
+
+.navbar--links li {
+  margin-top: 10px;
+}
+
+.navbar--links li:hover {
+}
+
+.navbar--links a {
+  padding-left: 17px;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: var(--nav-hover);
+  transition: all 0.4s ease-in-out;
+}
+
+.navbar--links a:hover {
+  background-color: var(--nav-hover);
+  color: white;
+}
+
+.navbar--links .active {
+  background-color: var(--nav-hover);
+  color: white;
+}
+
+.navbar--btn {
+  position: absolute;
+  z-index: 100;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 12px;
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
+.navbar--btn:hover {
+  cursor: pointer;
+}
+
+.navbar--btn--bar {
+  height: 3px;
+  width: 30px;
+  background-color: var(--nav-fg-color);
+  display: inline-block;
+  transform: rotate(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar--btn--bar.close:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 21px);
+}
+.navbar--btn--bar.close:nth-child(2) {
+  opacity: 0;
+  display: inherit;
+}
+.navbar--btn--bar.close:nth-child(3) {
+  transform: rotate(-45deg) translate(-5px, -10px);
+}
+
+.visible {
+  visibility: visible !important;
+  opacity: 100% !important;
+  transform: translateX(-200px);
+}
