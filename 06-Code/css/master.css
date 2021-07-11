@@ -3,6 +3,7 @@
   --nav-fg-color: #000000;
   --nav-height: 50px;
   --nav-hover: #11151f;
+  --cover-fg-color: #ffffff;
 }
 
 .navbar {
@@ -115,4 +116,37 @@
   visibility: visible !important;
   opacity: 100% !important;
   transform: translateX(-200px);
+}
+
+.cover {
+  position: relative;
+  height: 598px;
+  background-image: url("../img/cover.png");
+  background-position: center top;
+  background-size: auto 100%;
+  font-family: "Jost", sans-serif;
+}
+
+.cover--big {
+  top: 100px;
+  width: 315px;
+  position: absolute;
+  font-size: 40px;
+  line-height: 50px;
+  margin-top: 17px;
+  margin-left: 21px;
+  color: var(--cover-fg-color);
+}
+
+.cover--sm {
+  bottom: 30px;
+  right: 17px;
+  width: 325px;
+  text-align: right;
+  position: absolute;
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 17px;
+  margin-left: 21px;
+  color: var(--cover-fg-color);
 }
