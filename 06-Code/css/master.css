@@ -150,3 +150,67 @@
   margin-left: 21px;
   color: var(--cover-fg-color);
 }
+
+.company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--main-bg-color);
+}
+
+.company--title {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  font-size: 55px;
+  line-height: 73px;
+  font-weight: 400;
+  margin-top: 33px;
+}
+
+.company--img {
+  width: 349px;
+  height: 261;
+  margin-top: 50px;
+  margin-bottom: 36px;
+}
+
+.company--desc {
+  font-family: "Jost", sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.company--numbers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin-top: 80px;
+  margin-bottom: 68px;
+}
+
+.company--numbers--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.company--numbers--num {
+  font-family: "Jost", sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+.company--numbers--sub {
+  font-family: "Jost", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 300;
+}
