@@ -4,6 +4,7 @@
   --nav-height: 50px;
   --nav-hover: #11151f;
   --cover-fg-color: #ffffff;
+  --services-fg-color: #ffffff;
 }
 
 .navbar {
@@ -213,4 +214,59 @@
   font-size: 25px;
   line-height: 30px;
   font-weight: 300;
+}
+
+.services {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(31, 76, 160, 1) 75%
+  );
+  color: var(--services-fg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services--title {
+  font-family: "Jost", sans-serif;
+  font-size: 55px;
+  line-height: 73px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 45px;
+  margin-bottom: 55px;
+}
+
+.services--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services--item--img img {
+  height: 135px;
+  border-radius: 15px;
+}
+
+.services--item--title {
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-top: 23px;
+}
+
+.services--item--desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 23px;
+  margin-left: 35px;
+  margin-right: 35px;
+  text-align: center;
+  margin-bottom: 78px;
 }
