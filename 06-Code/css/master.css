@@ -5,6 +5,8 @@
   --nav-hover: #11151f;
   --cover-fg-color: #ffffff;
   --services-fg-color: #ffffff;
+  --contact-fg-color: #ffffff;
+  --contact-bg-color: #29292e;
 }
 
 .navbar {
@@ -276,6 +278,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: var(--main-bg-color);
 }
 
 .clients--title {
@@ -301,4 +304,65 @@
 .clients--item img {
   height: 160px;
   margin-bottom: 53px;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--contact-bg-color);
+}
+
+.contact--title {
+  font-family: "Jost", sans-serif;
+  text-transform: uppercase;
+  font-size: 55px;
+  line-height: 73px;
+  font-weight: 700;
+  margin-top: 53px;
+  margin-bottom: 53px;
+  color: var(--contact-fg-color);
+}
+
+.contact--img img {
+  height: 321px;
+  border-radius: 15px;
+}
+
+.contact--logo img {
+  height: 241px;
+}
+
+.contact--desc {
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  line-height: 45px;
+  weight: bold;
+  margin-bottom: 70px;
+  text-align: center;
+  color: var(--contact-fg-color);
+}
+
+.contact--list {
+  font-family: "Nunito", sans-serif;
+  font-size: 25px;
+  line-height: 35px;
+  weight: bold;
+  margin-bottom: 70px;
+  text-align: left;
+  color: var(--contact-fg-color);
+}
+
+.contact--list ul {
+  list-style: none;
+}
+
+.contact--list a {
+  text-decoration: none;
+  color: var(--contact-fg-color);
+}
+
+.contact--list a:hover {
+  border-bottom: 1px solid var(--contact-fg-color);
 }
