@@ -11,3 +11,15 @@ function toggleNav() {
     bar.classList.toggle("close");
   }
 }
+
+function resetActive() {
+  var routes = document.getElementsByClassName("navbar--links--link");
+  for (let route of routes) {
+    route.classList.remove("active");
+  }
+}
+
+function routeTo(obj) {
+  resetActive();
+  obj.classList.add("active");
+}
