@@ -11,6 +11,14 @@
   <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   <link rel="stylesheet" href="/css/sanitize.css">
   <link rel="stylesheet" href="/css/master.css">
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      reset: false
+    });
+  </script>
+
 </head>
 
 <body>
@@ -47,34 +55,38 @@
     <div class="company--title">
       A Empresa
     </div>
-    <img class="company--img" src="img/company.png" alt="Desenvolvedor trabalhando">
-    <div class="company--desc">
-      Atuamos há mais de 10 anos no mercado de tecnologia, realizando
-      consultoria e implementação de soluções customizadas.
-    </div>
-    <div class="company--numbers">
-      <div class="company--numbers--item">
-        <div class="company--numbers--num">
-          +10
+    <div class="company--content">
+      <img class="company--img" src="img/company.png" alt="Desenvolvedor trabalhando">
+      <div class="company--content--inner">
+        <div class="company--desc">
+          Atuamos há mais de 10 anos no mercado de tecnologia, realizando
+          consultoria e implementação de soluções customizadas.
         </div>
-        <div class="company--numbers--sub">
-          anos
-        </div>
-      </div>
-      <div class="company--numbers--item">
-        <div class="company--numbers--num">
-          +100
-        </div>
-        <div class="company--numbers--sub">
-          projetos
-        </div>
-      </div>
-      <div class="company--numbers--item">
-        <div class="company--numbers--num">
-          +10000...
-        </div>
-        <div class="company--numbers--sub">
-          linhas de código
+        <div class="company--numbers">
+          <div class="company--numbers--item">
+            <div class="company--numbers--num">
+              +10
+            </div>
+            <div class="company--numbers--sub">
+              anos
+            </div>
+          </div>
+          <div class="company--numbers--item">
+            <div class="company--numbers--num">
+              +100
+            </div>
+            <div class="company--numbers--sub">
+              projetos
+            </div>
+          </div>
+          <div class="company--numbers--item">
+            <div class="company--numbers--num">
+              +10000...
+            </div>
+            <div class="company--numbers--sub">
+              linhas de código
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -85,40 +97,42 @@
     <div class="services--title">
       Serviços
     </div>
-    <div class="services--item">
-      <div class="services--item--img">
-        <img src="img/oracle.png" alt="Logo da Oracle">
+    <div class="services--items">
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/oracle.png" alt="Logo da Oracle">
+        </div>
+        <div class="services--item--title">
+          Oracle Database
+        </div>
+        <div class="services--item--desc">
+          Modelagem, gerenciamento, otimização, ajustes, implementação migração
+          e programação PL/SQL
+        </div>
       </div>
-      <div class="services--item--title">
-        Oracle Database
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/mastersaf.png" alt="Logo da MASTERSAF">
+        </div>
+        <div class="services--item--title">
+          MASTER SAF
+        </div>
+        <div class="services--item--desc">
+          Implementação Fiscal e Tributária com os maiores ERPs do mercado.
+          Conte com quem tem experiência!
+        </div>
       </div>
-      <div class="services--item--desc">
-        Modelagem, gerenciamento, otimização, ajustes, implementação migração
-        e programação PL/SQL
-      </div>
-    </div>
-    <div class="services--item">
-      <div class="services--item--img">
-        <img src="img/mastersaf.png" alt="Logo da MASTERSAF">
-      </div>
-      <div class="services--item--title">
-        MASTER SAF
-      </div>
-      <div class="services--item--desc">
-        Implementação Fiscal e Tributária com os maiores ERPs do mercado.
-        Conte com quem tem experiência!
-      </div>
-    </div>
-    <div class="services--item">
-      <div class="services--item--img">
-        <img src="img/powerbi.png" alt="Logo do PowerBI">
-      </div>
-      <div class="services--item--title">
-        Power BI
-      </div>
-      <div class="services--item--desc">
-        Inteligência de negócios para sua empresa! Automação de relatórios
-        e dashboards que auxiliam nas tomadas de decisão!
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/powerbi.png" alt="Logo do PowerBI">
+        </div>
+        <div class="services--item--title">
+          Power BI
+        </div>
+        <div class="services--item--desc">
+          Inteligência de negócios para sua empresa! Automação de relatórios
+          e dashboards que auxiliam nas tomadas de decisão!
+        </div>
       </div>
     </div>
   </section>
@@ -131,17 +145,19 @@
     <div class="clients--desc">
       Alguns clientes já atendidos pela CBS Tech
     </div>
-    <div class="clients--item">
-      <img src="img/jd.png" alt="John Deere">
-    </div>
-    <div class="clients--item">
-      <img src="img/cvc.png" alt="CVC">
-    </div>
-    <div class="clients--item">
-      <img src="img/ambev.png" alt="Ambev">
-    </div>
-    <div class="clients--item">
-      <img src="img/ibm.png" alt="IBM">
+    <div class="clients--items">
+      <div class="clients--item">
+        <img src="img/jd.png" alt="John Deere">
+      </div>
+      <div class="clients--item">
+        <img src="img/cvc.png" alt="CVC">
+      </div>
+      <div class="clients--item">
+        <img src="img/ambev.png" alt="Ambev">
+      </div>
+      <div class="clients--item">
+        <img src="img/ibm.png" alt="IBM">
+      </div>
     </div>
   </section>
 
@@ -150,22 +166,26 @@
     <div class="contact--title">
       Contato
     </div>
-    <div class="contact--img">
-      <img src="img/contato.png" alt="Um atendente">
-    </div>
-    <div class="contact--logo">
-      <img src="img/cbs_contato.png" alt="Logo da CBS">
-    </div>
-    <div class="contact--desc">
-      Estamos sempre dispostos a melhor atender o seu negócio!
-    </div>
-    <div class="contact--list">
-      <ul>
-        <li><i class='bx bxl-whatsapp'></i><a href="https://wa.me/1XXXXXXXXXX?text=Peguei%20seu%20contato%20no%20site"> (11) 1111-1111</a></li>
-        <li><i class='bx bx-mail-send'></i><a href="mailto:contato@cbstech.com.br"> contato@cbstech.com.br</a></li>
-      </ul>
+    <div class="contact--items">
+      <div class="contact--img">
+      </div>
+      <div class="contact--items--inner">
+        <div class="contact--logo">
+          <img src="img/cbs_contato.png" alt="Logo da CBS">
+        </div>
+        <div class="contact--desc">
+          Estamos sempre dispostos para melhor atender o seu negócio!
+        </div>
+        <div class="contact--list">
+          <ul>
+            <li><i class='bx bxl-whatsapp'></i><a href="https://wa.me/1XXXXXXXXXX?text=Peguei%20seu%20contato%20no%20site"> (11) 1111-1111</a></li>
+            <li><i class='bx bx-mail-send'></i><a href="mailto:contato@cbstech.com.br"> contato@cbstech.com.br</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
+
 
   <script src="js/main.js"></script>
 </body>

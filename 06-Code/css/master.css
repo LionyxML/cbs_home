@@ -10,373 +10,526 @@
   scroll-behavior: smooth;
 }
 
-.navbar {
-  z-index: 100;
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  min-height: var(--nav-height);
-  background-color: var(--main-bg-color);
-  text: var(--nav-fg-color);
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+@media only screen and (min-width: 320px) {
+  .navbar {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    min-height: var(--nav-height);
+    background-color: var(--main-bg-color);
+    text: var(--nav-fg-color);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar--logo {
+    margin-top: 2px;
+    margin-left: 14px;
+  }
+
+  .navbar--logo a > img {
+    width: 185px;
+    height: 48px;
+  }
+
+  .navbar--links {
+    visibility: hidden;
+    z-index: 100;
+    position: absolute;
+    right: -200px;
+    top: var(--nav-height);
+    width: 157px;
+    height: 267px;
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    background-color: var(--main-bg-color);
+    opacity: 0%;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar--links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar--links li {
+    margin-top: 10px;
+  }
+
+  .navbar--links li:hover {
+  }
+
+  .navbar--links a {
+    padding-left: 17px;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--nav-hover);
+    transition: all 0.4s ease-in-out;
+  }
+
+  .navbar--links a:hover {
+    background-color: var(--nav-hover);
+    color: white;
+  }
+
+  .navbar--links .active {
+    background-color: var(--nav-hover);
+    color: white;
+  }
+
+  .navbar--btn {
+    position: absolute;
+    z-index: 100;
+    right: 14px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+  }
+
+  .navbar--btn:hover {
+    cursor: pointer;
+  }
+
+  .navbar--btn--bar {
+    height: 3px;
+    width: 30px;
+    background-color: var(--nav-fg-color);
+    display: inline-block;
+    transform: rotate(0);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navbar--btn--bar.close:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 21px);
+  }
+  .navbar--btn--bar.close:nth-child(2) {
+    opacity: 0;
+    display: inherit;
+  }
+  .navbar--btn--bar.close:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, -10px);
+  }
+
+  .visible {
+    visibility: visible !important;
+    opacity: 100% !important;
+    transform: translateX(-200px);
+  }
+
+  .cover {
+    position: relative;
+    height: 598px;
+    background-image: url("../img/cover.png");
+    background-position: center top;
+    background-size: auto 120%;
+    font-family: "Jost", sans-serif;
+  }
+
+  .cover--big {
+    top: 100px;
+    width: 315px;
+    position: absolute;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 17px;
+    margin-left: 21px;
+    color: var(--cover-fg-color);
+  }
+
+  .cover--sm {
+    bottom: 30px;
+    right: 17px;
+    width: 325px;
+    text-align: right;
+    position: absolute;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 17px;
+    margin-left: 21px;
+    color: var(--cover-fg-color);
+  }
+
+  .company {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--main-bg-color);
+  }
+
+  .company--content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .company--title {
+    font-family: "Jost", sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 73px;
+    font-weight: 400;
+    margin-top: 33px;
+  }
+
+  .company--img {
+    width: 349px;
+    height: 261;
+    margin-top: 50px;
+    margin-bottom: 36px;
+    border-radius: 15px;
+  }
+
+  .company--desc {
+    font-family: "Jost", sans-serif;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 300;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .company--numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    margin-top: 80px;
+    margin-bottom: 68px;
+  }
+
+  .company--numbers--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+  }
+
+  .company--numbers--num {
+    font-family: "Jost", sans-serif;
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 700;
+  }
+
+  .company--numbers--sub {
+    font-family: "Jost", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 300;
+  }
+
+  .services {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(31, 76, 160, 1) 75%
+    );
+    color: var(--services-fg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services--title {
+    font-family: "Jost", sans-serif;
+    font-size: 55px;
+    line-height: 73px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+
+  .services--items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services--item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .services--item--img img {
+    height: 135px;
+    border-radius: 15px;
+  }
+
+  .services--item--title {
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-top: 23px;
+  }
+
+  .services--item--desc {
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 23px;
+    margin-left: 35px;
+    margin-right: 35px;
+    text-align: center;
+    margin-bottom: 78px;
+  }
+
+  .clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--main-bg-color);
+  }
+
+  .clients--title {
+    font-family: "Jost", sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 73px;
+    font-weight: 400;
+    margin-top: 33px;
+  }
+
+  .clients--desc {
+    font-family: "Jost", sans-serif;
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-top: 30px;
+    padding: 0 40px;
+    text-align: center;
+    margin-bottom: 53px;
+  }
+
+  .clients--items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .clients--item img {
+    height: 160px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 53px;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--contact-bg-color);
+  }
+
+  .contact--title {
+    font-family: "Jost", sans-serif;
+    text-transform: uppercase;
+    font-size: 55px;
+    line-height: 73px;
+    font-weight: 700;
+    margin-top: 53px;
+    margin-bottom: 53px;
+    color: var(--contact-fg-color);
+  }
+
+  .contact--items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact--items--inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact--logo img {
+    height: 241px;
+  }
+
+  .contact--desc {
+    font-family: "Nunito", sans-serif;
+    font-size: 35px;
+    line-height: 45px;
+    max-width: 473px;
+    weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    color: var(--contact-fg-color);
+    padding: 0 20px;
+  }
+
+  .contact--list {
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    line-height: 45px;
+    weight: bold;
+    margin-bottom: 70px;
+    text-align: left;
+    color: var(--contact-fg-color);
+  }
+
+  .contact--list ul {
+    list-style: none;
+  }
+
+  .contact--list a {
+    text-decoration: none;
+    color: var(--contact-fg-color);
+  }
+
+  .contact--list a:hover {
+    border-bottom: 1px solid var(--contact-fg-color);
+  }
+
+  #company_anchor,
+  #services_anchor,
+  #clients_anchor,
+  #contact_anchor {
+    display: block;
+    position: relative;
+    top: -50px;
+    visibility: hidden;
+  }
 }
 
-.navbar--logo {
-  margin-top: 2px;
-  margin-left: 14px;
-}
+@media only screen and (min-width: 768px) {
+  .navbar {
+    align-items: baseline;
+  }
+  .navbar--logo {
+  }
 
-.navbar--logo a > img {
-  width: 185px;
-  height: 48px;
-}
+  .navbar--btn {
+    display: none;
+  }
+  .navbar--links {
+    position: relative;
+    visibility: visible;
+    opacity: 100%;
+    width: 60%;
+    height: var(--nav-height);
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 0;
+    margin-top: 0;
+    height: 100%;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+  .navbar--links ul {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 100%;
+    margin: 0;
+  }
+  .navbar--links a {
+    padding: 0 5px;
+    transition: none;
+  }
+  .navbar--links a:hover {
+    background-color: var(--main-bg-color);
+    color: var(--nav-fg-color);
+    border-bottom: 2px solid black;
+  }
 
-.navbar--links {
-  visibility: hidden;
-  z-index: 100;
-  position: absolute;
-  right: -200px;
-  top: var(--nav-height);
-  width: 157px;
-  height: 267px;
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-  background-color: var(--main-bg-color);
-  opacity: 0%;
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-}
+  .navbar--links .active {
+    background-color: var(--main-bg-color) !important;
+    color: var(--nav-fg-color) !important;
+    border-bottom: 2px solid black;
+  }
 
-.navbar--links ul {
-}
+  .cover--big {
+    top: 0;
+    width: 651px;
+    position: absolute;
+    font-size: 70px;
+    line-height: 90px;
+    margin-top: 69px;
+    margin-left: 32px;
+    color: var(--cover-fg-color);
+  }
 
-.navbar--links li {
-  margin-top: 10px;
-}
+  .cover--sm {
+    bottom: 48px;
+    right: 52px;
+    width: 561px;
+    text-align: right;
+    position: absolute;
+    font-size: 40px;
+    line-height: 60px;
+    margin-top: 17px;
+    margin-left: 21px;
+    color: var(--cover-fg-color);
+  }
 
-.navbar--links li:hover {
-}
+  .company--content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 
-.navbar--links a {
-  padding-left: 17px;
-  display: inline-block;
-  width: 100%;
-  text-decoration: none;
-  color: var(--nav-hover);
-  transition: all 0.4s ease-in-out;
-}
+  .company--desc {
+    margin-top: 2rem;
+  }
+  .company--numbers {
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+  }
 
-.navbar--links a:hover {
-  background-color: var(--nav-hover);
-  color: white;
-}
+  .company--img {
+    margin: 2rem;
+    width: 100%;
+  }
 
-.navbar--links .active {
-  background-color: var(--nav-hover);
-  color: white;
-}
+  .services--items {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-.navbar--btn {
-  position: absolute;
-  z-index: 100;
-  right: 14px;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
-  padding-top: 2.5px;
-  padding-bottom: 2.5px;
-}
+  .services--item {
+    width: 380px;
+  }
 
-.navbar--btn:hover {
-  cursor: pointer;
-}
+  .services--item--desc {
+    margin: 1rem 1rem 4rem 1rem;
+  }
 
-.navbar--btn--bar {
-  height: 3px;
-  width: 30px;
-  background-color: var(--nav-fg-color);
-  display: inline-block;
-  transform: rotate(0);
-  transition: all 0.5s ease-in-out;
-}
-
-.navbar--btn--bar.close:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 21px);
-}
-.navbar--btn--bar.close:nth-child(2) {
-  opacity: 0;
-  display: inherit;
-}
-.navbar--btn--bar.close:nth-child(3) {
-  transform: rotate(-45deg) translate(-5px, -10px);
-}
-
-.visible {
-  visibility: visible !important;
-  opacity: 100% !important;
-  transform: translateX(-200px);
-}
-
-.cover {
-  position: relative;
-  height: 598px;
-  background-image: url("../img/cover.png");
-  background-position: center top;
-  background-size: auto 100%;
-  font-family: "Jost", sans-serif;
-}
-
-.cover--big {
-  top: 100px;
-  width: 315px;
-  position: absolute;
-  font-size: 40px;
-  line-height: 50px;
-  margin-top: 17px;
-  margin-left: 21px;
-  color: var(--cover-fg-color);
-}
-
-.cover--sm {
-  bottom: 30px;
-  right: 17px;
-  width: 325px;
-  text-align: right;
-  position: absolute;
-  font-size: 25px;
-  line-height: 30px;
-  margin-top: 17px;
-  margin-left: 21px;
-  color: var(--cover-fg-color);
-}
-
-.company {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: var(--main-bg-color);
-}
-
-.company--title {
-  font-family: "Jost", sans-serif;
-  text-transform: uppercase;
-  font-size: 55px;
-  line-height: 73px;
-  font-weight: 400;
-  margin-top: 33px;
-}
-
-.company--img {
-  width: 349px;
-  height: 261;
-  margin-top: 50px;
-  margin-bottom: 36px;
-  border-radius: 15px;
-}
-
-.company--desc {
-  font-family: "Jost", sans-serif;
-  font-size: 35px;
-  line-height: 45px;
-  font-weight: 300;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.company--numbers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  margin-top: 80px;
-  margin-bottom: 68px;
-}
-
-.company--numbers--item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 0 15px;
-}
-
-.company--numbers--num {
-  font-family: "Jost", sans-serif;
-  font-size: 35px;
-  line-height: 45px;
-  font-weight: 700;
-}
-
-.company--numbers--sub {
-  font-family: "Jost", sans-serif;
-  font-size: 25px;
-  line-height: 30px;
-  font-weight: 300;
-}
-
-.services {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    270deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(31, 76, 160, 1) 75%
-  );
-  color: var(--services-fg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.services--title {
-  font-family: "Jost", sans-serif;
-  font-size: 55px;
-  line-height: 73px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 45px;
-  margin-bottom: 55px;
-}
-
-.services--item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.services--item--img img {
-  height: 135px;
-  border-radius: 15px;
-}
-
-.services--item--title {
-  font-family: "Jost", sans-serif;
-  font-size: 40px;
-  line-height: 60px;
-  font-weight: 400;
-  margin-top: 23px;
-}
-
-.services--item--desc {
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-  line-height: 30px;
-  margin-top: 23px;
-  margin-left: 35px;
-  margin-right: 35px;
-  text-align: center;
-  margin-bottom: 78px;
-}
-
-.clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: var(--main-bg-color);
-}
-
-.clients--title {
-  font-family: "Jost", sans-serif;
-  text-transform: uppercase;
-  font-size: 55px;
-  line-height: 73px;
-  font-weight: 400;
-  margin-top: 33px;
-}
-
-.clients--desc {
-  font-family: "Jost", sans-serif;
-  font-size: 40px;
-  line-height: 60px;
-  font-weight: 400;
-  margin-top: 30px;
-  padding: 0 40px;
-  text-align: center;
-  margin-bottom: 53px;
-}
-
-.clients--item img {
-  height: 160px;
-  margin-bottom: 53px;
-}
-
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: var(--contact-bg-color);
-}
-
-.contact--title {
-  font-family: "Jost", sans-serif;
-  text-transform: uppercase;
-  font-size: 55px;
-  line-height: 73px;
-  font-weight: 700;
-  margin-top: 53px;
-  margin-bottom: 53px;
-  color: var(--contact-fg-color);
-}
-
-.contact--img img {
-  height: 321px;
-  border-radius: 15px;
-}
-
-.contact--logo img {
-  height: 241px;
-}
-
-.contact--desc {
-  font-family: "Nunito", sans-serif;
-  font-size: 35px;
-  line-height: 45px;
-  weight: bold;
-  margin-bottom: 50px;
-  text-align: center;
-  color: var(--contact-fg-color);
-  padding: 0 20px;
-}
-
-.contact--list {
-  font-family: "Nunito", sans-serif;
-  font-size: 25px;
-  line-height: 45px;
-  weight: bold;
-  margin-bottom: 70px;
-  text-align: left;
-  color: var(--contact-fg-color);
-}
-
-.contact--list ul {
-  list-style: none;
-}
-
-.contact--list a {
-  text-decoration: none;
-  color: var(--contact-fg-color);
-}
-
-.contact--list a:hover {
-  border-bottom: 1px solid var(--contact-fg-color);
-}
-
-#company_anchor,
-#services_anchor,
-#clients_anchor,
-#contact_anchor {
-  display: block;
-  position: relative;
-  top: -50px;
-  visibility: hidden;
+  .contact--items {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .contact--img {
+    height: 100vh;
+    width: 300px;
+    background-image: url("../img/contato.png");
+    background-position: center top;
+    background-size: auto 100%;
+  }
 }
