@@ -24,29 +24,29 @@ function routeTo(obj) {
   obj.classList.add("active");
 }
 
-ScrollReveal().reveal(".cover", { delay: 500, duration: 200 });
-ScrollReveal().reveal(".cover--big", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".cover--sm", { delay: 1000, duration: 2000 });
+ScrollReveal().reveal(".cover", { delay: 250, duration: 200 });
+ScrollReveal().reveal(".cover--big", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".cover--sm", { delay: 500, duration: 1000 });
 
-ScrollReveal().reveal(".company--title", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".company--img", { delay: 1000, duration: 2000 });
+ScrollReveal().reveal(".company--title", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".company--img", { delay: 500, duration: 1000 });
 ScrollReveal().reveal(".company--content--inner", {
   delay: 2300,
-  duration: 2000,
+  duration: 1000,
 });
 
-ScrollReveal().reveal(".services--title", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".services--item", { delay: 1000, duration: 2000 });
-ScrollReveal().reveal(".services--title", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".services--item", { delay: 1000, duration: 2000 });
+ScrollReveal().reveal(".services--title", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".services--item", { delay: 500, duration: 1000 });
+ScrollReveal().reveal(".services--title", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".services--item", { delay: 500, duration: 1000 });
 
-ScrollReveal().reveal(".clients--title", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".clients--desc", { delay: 1000, duration: 2000 });
-ScrollReveal().reveal(".clients--item", { delay: 1200, duration: 2000 });
+ScrollReveal().reveal(".clients--title", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".clients--desc", { delay: 500, duration: 1000 });
+ScrollReveal().reveal(".clients--item", { delay: 1200, duration: 1000 });
 
-ScrollReveal().reveal(".contact--title", { delay: 500, duration: 2000 });
-ScrollReveal().reveal(".contact--img ", { delay: 1000, duration: 2000 });
+ScrollReveal().reveal(".contact--title", { delay: 250, duration: 1000 });
+ScrollReveal().reveal(".contact--img ", { delay: 500, duration: 1000 });
 ScrollReveal().reveal(".contact--items--inner", {
   delay: 1200,
-  duration: 2000,
+  duration: 1000,
 });
