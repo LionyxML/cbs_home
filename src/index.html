@@ -1,220 +1,178 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>CBS Tech - Consultoria em Tecnologia da Informação</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="./css/sanitize.css" />
-    <link rel="stylesheet" href="./css/master.css" />
-  </head>
 
-  <body>
-    <nav class="navbar">
-      <div class="navbar--logo">
-        <a href="#home"><img src="img/cbs_logo.png" alt="Logo da CBS" /></a>
-      </div>
-      <div class="navbar--links">
-        <ul>
-          <li>
-            <a
-              href="#home"
-              class="navbar--links--link active"
-              onClick="routeTo(this)"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="#company_anchor"
-              class="navbar--links--link"
-              onClick="routeTo(this)"
-              >A Empresa</a
-            >
-          </li>
-          <li>
-            <a
-              href="#services_anchor"
-              class="navbar--links--link"
-              onClick="routeTo(this)"
-              >Serviços</a
-            >
-          </li>
-          <li>
-            <a
-              href="#clients_anchor"
-              class="navbar--links--link"
-              onClick="routeTo(this)"
-              >Clientes</a
-            >
-          </li>
-          <li>
-            <a
-              href="#contact_anchor"
-              class="navbar--links--link"
-              onClick="routeTo(this)"
-              >Contato</a
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="navbar--btn">
-        <span class="navbar--btn--bar"></span>
-        <span class="navbar--btn--bar"></span>
-        <span class="navbar--btn--bar"></span>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>CBS Tech - Consultoria em Tecnologia da Informação</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+  <link rel="stylesheet" href="./css/sanitize.css" />
+  <link rel="stylesheet" href="./css/master.css" />
+</head>
 
-    <section class="cover" id="home">
-      <div class="cover--big">Garantimos o seu sucesso digital!</div>
-      <div class="cover--sm">
-        Contrate a consultoria que entrega resultados com excelência!
-      </div>
-    </section>
+<body>
+  <nav class="navbar">
+    <div class="navbar--logo">
+      <a href="#home"><img src="img/cbs_logo.png" alt="Logo da CBS" /></a>
+    </div>
+    <div class="navbar--links">
+      <ul>
+        <li>
+          <a href="#home" class="navbar--links--link active" onClick="routeTo(this)">Home</a>
+        </li>
+        <li>
+          <a href="#company_anchor" class="navbar--links--link" onClick="routeTo(this)">A Empresa</a>
+        </li>
+        <li>
+          <a href="#services_anchor" class="navbar--links--link" onClick="routeTo(this)">Serviços</a>
+        </li>
+        <li>
+          <a href="#clients_anchor" class="navbar--links--link" onClick="routeTo(this)">Clientes</a>
+        </li>
+        <li>
+          <a href="#contact_anchor" class="navbar--links--link" onClick="routeTo(this)">Contato</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar--btn">
+      <span class="navbar--btn--bar"></span>
+      <span class="navbar--btn--bar"></span>
+      <span class="navbar--btn--bar"></span>
+    </div>
+  </nav>
 
-    <span id="company_anchor"></span>
-    <section class="company" id="company">
-      <div class="company--title">A Empresa</div>
-      <div class="company--content">
-        <img
-          class="company--img"
-          src="img/company.png"
-          alt="Desenvolvedor trabalhando"
-        />
-        <div class="company--content--inner">
-          <div class="company--desc">
-            Atuamos há mais de 14 anos no mercado de tecnologia, realizando
-            consultoria e implementação de soluções customizadas.
+  <section class="cover" id="home">
+    <div class="cover--big">Garantimos o seu sucesso digital!</div>
+    <div class="cover--sm">
+      Contrate a consultoria que entrega resultados com excelência!
+    </div>
+  </section>
+
+  <span id="company_anchor"></span>
+  <section class="company" id="company">
+    <div class="company--title">A Empresa</div>
+    <div class="company--content">
+      <img class="company--img" src="img/company.png" alt="Desenvolvedor trabalhando" />
+      <div class="company--content--inner">
+        <div class="company--desc">
+          Atuamos há mais de 14 anos no mercado de tecnologia, realizando
+          consultoria e implementação de soluções customizadas.
+        </div>
+        <div class="company--numbers">
+          <div class="company--numbers--item">
+            <div class="company--numbers--num">+14</div>
+            <div class="company--numbers--sub">anos</div>
           </div>
-          <div class="company--numbers">
-            <div class="company--numbers--item">
-              <div class="company--numbers--num">+14</div>
-              <div class="company--numbers--sub">anos</div>
-            </div>
-            <div class="company--numbers--item">
-              <div class="company--numbers--num">+100</div>
-              <div class="company--numbers--sub">projetos</div>
-            </div>
+          <div class="company--numbers--item">
+            <div class="company--numbers--num">+100</div>
+            <div class="company--numbers--sub">projetos</div>
+          </div>
           <!--  <div class="company--numbers--item">
               <div class="company--numbers--num">+10000...</div>
               <div class="company--numbers--sub">linhas de código</div>
             </div>-->
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <span id="services_anchor"></span>
-    <section class="services" id="services">
-      <div class="services--title">Serviços</div>
-      <div class="services--items">
-        <div class="services--item">
-          <div class="services--item--img">
-            <img src="img/oracle.png" alt="Logo da Oracle" />
-          </div>
-          <div class="services--item--title">Oracle Database</div>
-          <div class="services--item--desc">
-            Modelagem, gerenciamento, otimização, ajustes, implementação
-            migração e programação PL/SQL
-          </div>
+  <span id="services_anchor"></span>
+  <section class="services" id="services">
+    <div class="services--title">Serviços</div>
+    <div class="services--items">
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/oracle.png" alt="Logo da Oracle" />
         </div>
-        <div class="services--item">
-          <div class="services--item--img">
-            <img src="img/mastersaf.png" alt="Logo da MASTERSAF" />
-          </div>
-          <div class="services--item--title">MASTER SAF</div>
-          <div class="services--item--desc">
-            Implementação Fiscal e Tributária com os maiores ERPs do mercado.
-            Conte com quem tem experiência!
-          </div>
-        </div>
-        <div class="services--item">
-          <div class="services--item--img">
-            <img src="img/powerbi.png" alt="Logo do PowerBI" />
-          </div>
-          <div class="services--item--title">Power BI</div>
-          <div class="services--item--desc">
-            Inteligência de negócios para sua empresa! Automação de relatórios e
-            dashboards que auxiliam nas tomadas de decisão!
-          </div>
+        <div class="services--item--title">Oracle Database</div>
+        <div class="services--item--desc">
+          Modelagem, gerenciamento, otimização, ajustes, implementação
+          migração e programação PL/SQL
         </div>
       </div>
-    </section>
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/mastersaf.png" alt="Logo da MASTERSAF" />
+        </div>
+        <div class="services--item--title">MASTER SAF</div>
+        <div class="services--item--desc">
+          Implementação Fiscal e Tributária com os maiores ERPs do mercado.
+          Conte com quem tem experiência!
+        </div>
+      </div>
+      <div class="services--item">
+        <div class="services--item--img">
+          <img src="img/powerbi.png" alt="Logo do PowerBI" />
+        </div>
+        <div class="services--item--title">Power BI</div>
+        <div class="services--item--desc">
+          Inteligência de negócios para sua empresa! Automação de relatórios e
+          dashboards que auxiliam nas tomadas de decisão!
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <span id="clients_anchor"></span>
-    <section class="clients" id="clients">
-      <div class="clients--title">Clientes</div>
-      <div class="clients--desc">
-        Alguns clientes já atendidos pela CBS Tech
+  <span id="clients_anchor"></span>
+  <section class="clients" id="clients">
+    <div class="clients--title">Clientes</div>
+    <div class="clients--desc">
+      Alguns clientes já atendidos pela CBS Tech
+    </div>
+    <div class="clients--items">
+      <div class="clients--item">
+        <img src="img/jd.png" alt="John Deere" />
       </div>
-      <div class="clients--items">
-        <div class="clients--item">
-          <img src="img/jd.png" alt="John Deere" />
-        </div>
-        <div class="clients--item">
-          <img src="img/cvc.png" alt="CVC" />
-        </div>
-        <div class="clients--item">
-          <img src="img/ambev.png" alt="Ambev" />
-        </div>
-        <div class="clients--item">
-          <img src="img/ibm.png" alt="IBM" />
-        </div>
+      <div class="clients--item">
+        <img src="img/cvc.png" alt="CVC" />
       </div>
-    </section>
+      <div class="clients--item">
+        <img src="img/ambev.png" alt="Ambev" />
+      </div>
+      <div class="clients--item">
+        <img src="img/ibm.png" alt="IBM" />
+      </div>
+    </div>
+  </section>
 
-    <span id="contact_anchor"></span>
-    <section class="contact" id="contact">
-      <div class="contact--title">Contato</div>
-      <div class="contact--items">
-        <div class="contact--img"></div>
-        <div class="contact--items--inner">
-          <div class="contact--logo">
-            <img src="img/cbs_contato.png" alt="Logo da CBS" />
-          </div>
-          <div class="contact--desc">
-            Estamos sempre dispostos para melhor atender o seu negócio!
-          </div>
-          <div class="contact--list">
-            <ul>
-              <li>
-                <i class="bx bxl-whatsapp"></i
-                ><a
-                  href="https://wa.me/5511991668710?text=Olá!%20Podemos%20conversar?"
-                >
-                  (11) 99166-8710</a
-                >
-              </li>
-              <li>
-                <i class="bx bx-mail-send"></i
-                ><a href="mailto:claudio.santos@cbstech.com.br">
-                  contato@cbstech.com.br</a
-                >
-              </li>
-            </ul>
-          </div>
+  <span id="contact_anchor"></span>
+  <section class="contact" id="contact">
+    <div class="contact--title">Contato</div>
+    <div class="contact--items">
+      <div class="contact--img"></div>
+      <div class="contact--items--inner">
+        <div class="contact--logo">
+          <img src="img/cbs_contato.png" alt="Logo da CBS" />
+        </div>
+        <div class="contact--desc">
+          Estamos sempre dispostos para melhor atender o seu negócio!
+        </div>
+        <div class="contact--list">
+          <ul>
+            <li>
+              <i class="bx bxl-whatsapp"></i><a href="https://wa.me/5511991668710?text=Olá!%20Podemos%20conversar?">
+                (11) 99166-8710</a>
+            </li>
+            <li>
+              <i class="bx bx-mail-send"></i><a href="mailto:claudio.santos@cbstech.com.br">
+                contato@cbstech.com.br</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script>
-      ScrollReveal({
-        reset: false,
-      });
-    </script>
-    <script src="./js/main.js"></script>
-  </body>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal({
+      reset: false,
+    });
+  </script>
+  <script src="./js/main.js"></script>
+</body>
+
 </html>
